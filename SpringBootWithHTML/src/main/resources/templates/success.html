@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Success!</title>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin: 50px auto 0;">
+<h1>You've Successfully Made a Post!</h1>
+<fieldset style="width: 245px;">
+    <h3 th:text="${title}"></h3>
+    <p th:text="${content}"></p>
+    <br>
+    <p th:text="${date}"></p>
+    <p th:text="${privacy}"></p>
+</fieldset>
+    <a href="/dashboard">See all posts</a>
+</body>
+</html>

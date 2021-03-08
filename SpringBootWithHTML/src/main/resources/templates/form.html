@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OliBook.dk</title>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin: 50px auto 0;">
+<img th:src="@{~/images/LOGOB.png}" width="80" height="80" alt="(OliBook Logo)">
+<h1>Create a post</h1>
+<form action="/submit" method="POST">
+
+    <!-- Outline -->
+    <fieldset style="width: auto;">
+
+        <!-- Title box -->
+        <label for="title">Post Title:</label>
+        <p>
+            <input style="width: 300px" type="text" id="title" name="title"/>
+            <br><br>
+
+            <!-- Content box -->
+            <label for="content">Write Content:</label>
+        <p>
+            <textarea style="width: 300px" id="content" name="content"></textarea>
+
+            <br><br>
+            <!-- Date box -->
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"/>
+
+            <br><br>
+            <!-- Public-->
+            <label for="private1">Public</label>
+            <input type="checkbox" id="private1" name="privacy" value="Public"/>
+
+            <br><br>
+            <!-- Private -->
+            <label for="private1">Private</label>
+            <input type="checkbox" id="private2" name="privacy" value="Private"/>
+
+            <br><br>
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+    </fieldset>
+
+</form>
+
+</body>
+</html>
